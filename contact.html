@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Dhruti Resume</title>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_OzVuJ2XhwjJj1k1uf");
+            emailjs.send("service_vw1kbk3","dhruti", {name: "dhruti", notes: "the project is..."})();
+    </script>
 </head>
 <body>
     <header>
@@ -58,7 +63,7 @@
                 <h5 class="uppercase text-center">Let's work together!</h5>
 
                 <div class="center-form">
-                    <form>
+                    <form onsubmit = "return sendMail(this);">
                         <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" 
                         required />
                         <input type="email" name="email" id="emailaddress" class="form-control" 
@@ -142,6 +147,7 @@
         </div>
 
     </footer>
+    <script src = "assets/js/sendEmail.js"></script>
     
 </body>
-</html>
+</html> 
